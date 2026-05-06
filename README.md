@@ -28,7 +28,7 @@ A fully responsive, animated personal portfolio built to present Maharshi Denuva
 
 ## Live Site
 
-- Live URL: Add your deployed URL here after publishing to Vercel or Netlify
+- Live URL: https://maharshi-personal-portfolio.vercel.app/
 
 ## Project Sections
 
@@ -82,7 +82,5 @@ npm run preview
 
 ## Notes
 
-- Update the live URL in this README after deployment.
 - Resume links currently point to a Google Drive file.
 - Project thumbnails are stored in the `public/` folder.
-
