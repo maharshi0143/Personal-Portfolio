@@ -35,36 +35,36 @@ export function HeroSection({
         transition={parallaxTransition}
       />
 
-      <div className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+      <div className="mx-auto grid w-full max-w-6xl gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           transition={revealTransition}
-          className="space-y-6"
+          className="space-y-5 sm:space-y-6"
         >
-          <div className="flex flex-wrap items-center gap-3">
-            <p className="section-kicker">Software Engineer & AI/ML Research Collaborator</p>
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+            <p className="section-kicker break-words">Software Engineer & AI/ML Research Collaborator</p>
             <span className="icon-chip">
               <span className="icon-chip__mark">{sectionIcons.experience}</span>
               Current role
             </span>
           </div>
-          <h1 className="text-4xl font-semibold text-white sm:text-5xl lg:text-6xl">{profile.name}</h1>
+          <h1 className="break-words text-3xl font-semibold text-white sm:text-5xl lg:text-6xl">{profile.name}</h1>
           <p className="max-w-2xl text-base font-semibold text-[color:var(--accent-soft)] sm:text-lg lg:text-xl">
             {profile.title}
           </p>
           <p className="max-w-xl text-base text-white/70 sm:text-lg">{profile.summary}</p>
           <p className="max-w-xl text-sm text-white/60 sm:text-base">{profile.focus}</p>
-          <div className="flex flex-wrap gap-4">
-            <a className="btn-primary" href="#projects">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+            <a className="btn-primary justify-center" href="#projects">
               View my work
             </a>
-            <a className="btn-secondary" href={profile.resumeView} target="_blank" rel="noreferrer">
+            <a className="btn-secondary justify-center" href={profile.resumeView} target="_blank" rel="noreferrer">
               View Resume
             </a>
-            <a className="btn-secondary" href="#contact">
+            <a className="btn-secondary justify-center" href="#contact">
               Let us build together
             </a>
           </div>
@@ -76,19 +76,19 @@ export function HeroSection({
         </motion.div>
 
         <motion.div
-          className="glass-card p-8"
+          className="glass-card p-6 sm:p-8"
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           transition={revealTransition}
         >
-          <div className="flex items-center gap-4">
-            <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-[linear-gradient(135deg,_rgba(255,107,61,0.6),_rgba(255,255,255,0.1))] text-xl font-semibold text-white">
+          <div className="flex items-start gap-4">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl bg-[linear-gradient(135deg,_rgba(255,107,61,0.6),_rgba(255,255,255,0.1))] text-lg font-semibold text-white sm:h-16 sm:w-16 sm:text-xl">
               MD
             </div>
-            <div>
-              <p className="text-base font-semibold text-white">{profile.name}</p>
+            <div className="min-w-0">
+              <p className="break-words text-base font-semibold text-white">{profile.name}</p>
               <p className="text-sm text-white/60">{profile.title}</p>
               <p className="text-xs text-white/40">Engineering thoughtful software and applied intelligence</p>
             </div>
@@ -128,14 +128,14 @@ export function AboutSection({ aboutPoints, cardHover, currentExploration, fadeU
       transition={revealTransition}
     >
       <div className="mx-auto grid w-full max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="glass-card p-8">
+        <div className="glass-card p-6 sm:p-8">
           <SectionHeading iconKey="about" label="About" />
           <h2 className="section-title">Engineer by practice, researcher by curiosity.</h2>
           <p className="mt-6 text-sm text-white/70 sm:text-base">{profile.bio}</p>
         </div>
         <div className="grid gap-6">
           <motion.div
-            className="glass-card p-8"
+            className="glass-card p-6 sm:p-8"
             variants={cardHover}
             initial="rest"
             whileHover={reduceMotion ? 'rest' : 'hover'}
@@ -148,7 +148,7 @@ export function AboutSection({ aboutPoints, cardHover, currentExploration, fadeU
             </ul>
           </motion.div>
           <motion.div
-            className="glass-card p-8"
+            className="glass-card p-6 sm:p-8"
             variants={cardHover}
             initial="rest"
             whileHover={reduceMotion ? 'rest' : 'hover'}
@@ -177,7 +177,7 @@ export function EducationSection({ cardHover, education, fadeUp, reduceMotion, r
         <SectionHeading iconKey="education" label="Education" />
         <h2 className="section-title">Academic foundation in AI and software systems.</h2>
         <motion.div
-          className="glass-card education-card mt-10 p-8"
+          className="glass-card education-card mt-10 p-6 sm:p-8"
           variants={cardHover}
           initial="rest"
           whileHover={reduceMotion ? 'rest' : 'hover'}
@@ -214,7 +214,7 @@ export function ExperienceSection({ cardHover, experiences, fadeUp, reduceMotion
           {experiences.map((experience) => (
             <motion.div
               key={`${experience.company}-${experience.role}`}
-              className="glass-card experience-card p-8"
+              className="glass-card experience-card p-6 sm:p-8"
               variants={cardHover}
               initial="rest"
               whileHover={reduceMotion ? 'rest' : 'hover'}
@@ -363,7 +363,7 @@ export function ContactSection({ cardHover, fadeUp, profile, reduceMotion, revea
       transition={revealTransition}
     >
       <div className="mx-auto grid w-full max-w-6xl gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="glass-card p-8">
+        <div className="glass-card p-6 sm:p-8">
           <SectionHeading iconKey="contact" label="Contact" />
           <h2 className="section-title">Let us build useful, intelligent software.</h2>
           <p className="mt-4 text-sm text-white/70">
@@ -380,7 +380,7 @@ export function ContactSection({ cardHover, fadeUp, profile, reduceMotion, revea
             ].map((link) => (
               <motion.a
                 key={link.label}
-                className="btn-secondary w-full justify-between"
+                className="btn-secondary w-full justify-between gap-4 break-all text-left"
                 href={link.href}
                 target={link.external ? '_blank' : undefined}
                 rel={link.external ? 'noreferrer' : undefined}
@@ -393,7 +393,7 @@ export function ContactSection({ cardHover, fadeUp, profile, reduceMotion, revea
           </div>
         </div>
         <motion.div
-          className="glass-card flex flex-col justify-between gap-6 p-8"
+          className="glass-card flex flex-col justify-between gap-6 p-6 sm:p-8"
           variants={cardHover}
           initial="rest"
           whileHover={reduceMotion ? 'rest' : 'hover'}

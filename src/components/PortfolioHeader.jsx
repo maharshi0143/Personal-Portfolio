@@ -3,14 +3,14 @@ import { AnimatePresence, motion } from 'framer-motion'
 export function PortfolioHeader({ menuOpen, reduceMotion, navLinks, onToggleMenu, onCloseMenu, profile }) {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 sm:px-10 lg:px-16">
-        <div className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-sm font-semibold text-white">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-10 sm:py-4 lg:px-16">
+        <div className="flex min-w-0 items-center gap-3">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-sm font-semibold text-white sm:h-11 sm:w-11">
             MD
           </div>
-          <div>
-            <p className="text-sm font-semibold text-white">{profile.name}</p>
-            <p className="text-xs text-[color:var(--text-muted)]">{profile.title}</p>
+          <div className="min-w-0">
+            <p className="truncate text-sm font-semibold text-white">{profile.name}</p>
+            <p className="hidden text-xs text-[color:var(--text-muted)] sm:block">{profile.title}</p>
           </div>
         </div>
 
@@ -30,7 +30,7 @@ export function PortfolioHeader({ menuOpen, reduceMotion, navLinks, onToggleMenu
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-white transition hover:border-white/20 md:hidden"
+          className="inline-flex shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-white transition hover:border-white/20 md:hidden"
           onClick={onToggleMenu}
           aria-expanded={menuOpen}
           aria-controls="mobile-nav"
@@ -49,7 +49,7 @@ export function PortfolioHeader({ menuOpen, reduceMotion, navLinks, onToggleMenu
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: reduceMotion ? 0 : 0.28, ease: 'easeOut' }}
           >
-            <div className="grid gap-4 border-t border-white/10 px-6 pb-6 pt-4 text-sm text-white/80">
+            <div className="grid gap-3 border-t border-white/10 px-4 pb-5 pt-4 text-sm text-white/80 sm:px-6 sm:pb-6">
               {navLinks.map((link) => (
                 <motion.a
                   key={link.href}
