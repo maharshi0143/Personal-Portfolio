@@ -1,10 +1,12 @@
 # Personal Portfolio
 
-Author: Maharshi Denuvakonda
+## Author
 
-## Description
+Maharshi Denuvakonda
 
-A fully responsive, animated personal portfolio built to present Maharshi Denuvakonda as a Software Engineer and AI/ML Research Collaborator. The site highlights education, current experience, technical skills, selected projects, resume access, and contact information in a polished single-page format.
+## Project Description
+
+This project is a personal portfolio website built to present Maharshi Denuvakonda as a Software Engineer and AI/ML Research Collaborator. It showcases professional focus, education, experience, technical skills, selected projects, resume links, and contact information through a responsive single-page interface.
 
 ## Tech Stack
 
@@ -13,54 +15,70 @@ A fully responsive, animated personal portfolio built to present Maharshi Denuva
 - Tailwind CSS
 - Framer Motion
 - CSS
+- JavaScript
+
+## Live Deployed Site
+
+- Live URL: https://personal-portfolio-teal-xi-27.vercel.app/
 
 ## Features
 
-- Responsive layout for mobile, tablet, and desktop
-- Sticky navigation with mobile menu
-- Parallax background motion
-- On-scroll reveal animations
-- Education and experience sections
-- Skills section with visual tech icons
-- Projects section with custom thumbnails and GitHub links
-- Contact section with email, phone, GitHub, LinkedIn, and resume actions
+- Responsive design for mobile, tablet, and desktop layouts
+- Sticky navigation with a mobile menu
+- Animated hero section and subtle parallax background effects
+- About, Education, Experience, Skills, Projects, and Contact sections
+- Resume viewing and download links
+- Project cards with GitHub repository links
 - Reduced-motion accessibility support
 
-## Live Site
+## Prerequisites
 
-- Live URL: https://maharshi-personal-portfolio.vercel.app/
+Before running the project locally, make sure you have:
 
-## Project Sections
+- Node.js installed
+- npm installed
 
-- Hero
-- About
-- Education
-- Experience
-- Skills
-- Projects
-- Contact
+## Local Setup and Run Instructions
 
-## Getting Started
+1. Clone the repository:
 
-1. Install dependencies:
+```bash
+git clone https://github.com/maharshi0143/Personal-Portfolio.git
+```
+
+2. Move into the project folder:
+
+```bash
+cd Personal-Portfolio
+```
+
+3. Install dependencies:
 
 ```bash
 npm install
 ```
 
-2. Start the development server:
+4. Start the development server:
 
 ```bash
 npm run dev
 ```
 
-3. Build for production:
+5. Open the local URL shown in the terminal, usually:
+
+```text
+http://localhost:5173
+```
+
+## Production Build
+
+To create a production build locally, run:
 
 ```bash
 npm run build
 ```
 
-4. Preview the production build:
+To preview the production build locally, run:
 
 ```bash
 npm run preview
@@ -70,17 +88,19 @@ npm run preview
 
 ```text
 .
-├── public/
-├── src/
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── index.html
-├── package.json
-└── README.md
+|-- public/
+|-- src/
+|   |-- components/
+|   |-- data/
+|   |-- App.jsx
+|   |-- index.css
+|   `-- main.jsx
+|-- index.html
+|-- package.json
+`-- README.md
 ```
 
 ## Notes
 
-- Resume links currently point to a Google Drive file.
 - Project thumbnails are stored in the `public/` folder.
+- Resume links currently point to Google Drive.
