@@ -18,7 +18,7 @@ import {
   experiences,
   highlights,
   navLinks,
-  profile,
+  profile,  
   projects,
   techSkills,
 } from './data/portfolioData'
